@@ -1,0 +1,51 @@
+ Volunteer Scheduling System 
+
+Overview Replace linear WhatsApp group chat + public google sheet signup process for daily volunteer scheduling with a rules-driven user-friendly system that automates repetitive coordinator workflows.
+
+Goals 
+- Enforce Scheduling Rules at Shift Signup 
+- Automate Reminders and Acknowledgements 
+- Provide coordinators with high-level visibility and tools for finding substitutes
+- Provide user interfaces with seamless scaling and adoption  
+
+This is solving a coordination problem for volunteers
+- emphasis on minimizing friction and maintaining adoption 
+- The system replaces both communication (WhatsApp) and scheduling (Google Sheets) functionality 
+- Reliability scores influence scheduling decisions
+ - the system needs to track and expose this data
+ - Coordinators need visibility (what shifts are understaffed) and tools(quick substitute finder) 
+ - Volunteer experience must be friction-free
+ - they sign up for shifts they can reliably work
+
+ 1) Scheduling Rules
+ - everyday theres 1 Kakad Shift and 4 Robe shifts that need to be filled that need to be filled at the local Sai Baba Temple tht is run completely through volunteers
+ - volunteers sign up during the last week of the previous month
+ - Rules for signups per volunteer 
+    - Max 2 Kakad shifts per volunteer per month  
+    - Max 4 total shifts per volunteer  per month 
+    - Max 2 Thursday shifts per volunteer  per month 
+    - Shift capacity limits  
+    - Can sign up for Kakad and Robe on same day
+
+2) Number of users and types of users
+There are many volunteers and not everyone picks up shifts regularly. 
+More importnatly there are Coordinators (2-3) Who need to take care of 
+    making sure to find a volunteer if no one signed up or someoen dropped because it is IMPORTANT that someone shows up for all the shifts posted. 
+    They notify people in esclating seniority for their avalibility if shift for next day/2days/3days..week is still needing to be filled. 
+Sign up rules only apply at signup, 
+    if someone picks up a shift after the month starts there are no limits as per the previous rules
+
+3)Communication 
+See above and use Whatsapp, right now ALL communications are happening in the group creating a lot of noise: 
+- send reminders to signed up volunteers previous day and one week before individually
+- message group for empty slots as day approaches to see if anyone. can pick up.
+- leave a channel for important info and updates not regarding this usual operational messaging
+
+4) Ignore reliability rating for now
+
+5) Right now everyuthing happens on Whatsapp using a coordinator managed 
+     i have attached in the old-interface dir as two whatsapp jpegs
+Google Sheet made for every month during the last week of the previous month}
+    attached in the old-interface dir as a pdf export of the google sheet
+    
+6) I want to code eventually the full fledged set up. But implement incrementally from core feature stack out. Make sure to use different commits and to run parallel agents to conserve tokens/context needed wherever poissible
