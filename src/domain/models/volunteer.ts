@@ -13,13 +13,4 @@ export class Volunteer {
             throw new Error("Phone number is required");
         }
     }
-
-    // Check if volunteers contact info is valid
-    isValid(): boolean {
-        return (
-            this.id.length > 0 &&
-            this.name.length > 0 &&
-            this.phoneNumber.length > 0 
-        );
-    }
 }

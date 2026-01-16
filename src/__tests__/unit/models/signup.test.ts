@@ -15,9 +15,9 @@ describe('Signup Model', () => {
     it ('should create a valid Signup', () => {
         const signup = new Signup('1', volunteer, shift, new Date());
         expect(signup).toBeDefined();
-        expect(signup.getVolunteerId()).toBe('1');
-        expect(signup.getShiftId()).toBe('1');
-        expect(signup.isNormalSignup()).toBe(true);
+        expect(signup.volunteer.id).toBe('1');
+        expect(signup.shift.id).toBe('1');
+        expect(signup.isEmergencyPickup).toBe(false);
     });
 
     it('should throw error for missing volunteer', () => {
@@ -36,6 +36,5 @@ describe('Signup Model', () => {
         const signup = new Signup('1', volunteer, shift, new Date(), true);
         expect(signup).toBeDefined();
         expect(signup.isEmergencyPickup).toBe(true);
-        expect(signup.isNormalSignup()).toBe(false);
     });
 });

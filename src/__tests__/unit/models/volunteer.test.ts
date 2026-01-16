@@ -11,8 +11,8 @@ describe('Volunteer Model', () => {
 
         expect(volunteer.id).toBe("1");
         expect(volunteer.name).toBe("John Doe");
-
-        expect(volunteer.isValid()).toBe(true);
+        expect(volunteer.phoneNumber).toBe("+1234567890");
+        expect(volunteer.email).toBe("john@example.com");
     });
 
     it('should throw error for missing name', () => {
