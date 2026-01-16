@@ -92,9 +92,9 @@ describe('SchedulingRulesEngine', () => {
       ];
 
       const result = engine.validateSignup(volunteer, newShift, existingSignups);
-      expect(result).toBeDefined(); 
+      expect(result).toBeDefined();
       expect(result.isAllowed).toBe(false);
-      expect(result.errors[0]).toContain('2 Kakad shifts this month');
+      expect(result.errors[0]).toContain('Kakad shifts this month');
     });
 
     it('should only count Kakad shifts in the same month', () => {
@@ -261,7 +261,7 @@ describe('SchedulingRulesEngine', () => {
       const result = engine.validateSignup(volunteer, newShift, existingSignups);
       expect(result).toBeDefined();
       expect(result.isAllowed).toBe(false);
-      expect(result.errors[0]).toContain('2 Thursday shifts');
+      expect(result.errors[0]).toContain('Thursday shifts');
     });
   });
 

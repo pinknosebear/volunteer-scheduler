@@ -14,12 +14,10 @@ export class Shift {
         }
     }
 
-    //get day of week 
     getDayOfWeek(): number {
         return this.date.getDay();
     }
-    
-    // get month and year shift belongs to 
+
     getMonthYear(): { month: number; year: number } {
         return {
             month: this.date.getMonth() + 1,
@@ -27,7 +25,6 @@ export class Shift {
         };
     }
 
-    // check if shift is on thursday
     isThursday(): boolean {
         return this.getDayOfWeek() === 4;
     }
