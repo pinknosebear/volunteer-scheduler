@@ -7,7 +7,12 @@
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "node -r ts-node/register src/server.ts",
+    "frontend:dev": "webpack serve --mode development",
+    "start": "node dist/server.js"
+    
   },
   "repository": {
     "type": "git",
