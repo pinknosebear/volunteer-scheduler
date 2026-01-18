@@ -1,0 +1,44 @@
+.quota-display {
+  background: #f0f8ff;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.quota-display h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.quota-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quota-label {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #666;
+}
+
+.quota-progress {
+  height: 30px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quota-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  transition: width 0.3s ease;
+}
+
+.quota-text {
+  font-size: 0.95em;
+  color: #333;
+  font-weight: 500;
+}

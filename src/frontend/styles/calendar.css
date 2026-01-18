@@ -1,0 +1,79 @@
+.shift-calendar h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.shifts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.shift-day {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+.shift-day h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.shifts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shift-card {
+  background: white;
+  border: 2px solid #007bff;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.shift-card:hover:not(.full) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.shift-card.full {
+  border-color: #ccc;
+  background: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.shift-type {
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.shift-time {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.shift-capacity {
+  font-size: 0.85em;
+  color: #999;
+}
+
+.shift-full-badge {
+  display: inline-block;
+  background: #dc3545;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.75em;
+  font-weight: bold;
+  margin-top: 8px;
+}
